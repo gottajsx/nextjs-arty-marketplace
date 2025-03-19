@@ -4,7 +4,8 @@
       "@components/*": ["./components/*"],
       "@styles/*": ["./styles/*"],
       "@mongodb/*": ["./mongodb/*"],
-      "@models/*": ["./models/*"]
+      "@models/*": ["./models/*"],
+      "@lib/*": ["./lib/*"]
     }
   }
 }
