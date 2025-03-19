@@ -1,4 +1,4 @@
-import { categories } from "@data";
+import { categories } from "../data";
 import { IoIosImages } from "react-icons/io";
 import { BiTrash } from "react-icons/bi";
 
