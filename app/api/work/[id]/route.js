@@ -43,7 +43,7 @@ export const PATCH = async (req, { params }) => {
         const buffer = Buffer.from(bytes);
 
         // Define the destination path for the uploaded file
-        const workImagePath = `C:/Users/Phuc/Desktop/artify/public/uploads/${photo.name}`;
+        const workImagePath = `/home/sebastien/Travail/Nextjs/arty-marketplace/public/uploads/tests/${photo.name}`;
 
         // Write the buffer to the filessystem
         await writeFile(workImagePath, buffer);

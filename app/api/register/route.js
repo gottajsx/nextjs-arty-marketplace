@@ -26,7 +26,6 @@ export async function POST (req) {
     const bytes = await file.arrayBuffer()
     const buffer = Buffer.from(bytes)
 
-    //const profileImagePath=`C:/Users/Phuc/Desktop/artify/public/uploads/${file.name}`
     const uploadDir = path.join(process.cwd(), 'public/uploads/tests');
     const profileImagePath = path.join(uploadDir, file.name);
     await writeFile(profileImagePath, buffer);
