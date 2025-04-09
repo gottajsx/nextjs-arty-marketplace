@@ -5,7 +5,8 @@
       "@styles/*": ["./styles/*"],
       "@mongodb/*": ["./mongodb/*"],
       "@models/*": ["./models/*"],
-      "@lib/*": ["./lib/*"]
+      "@lib/*": ["./lib/*"],
+      "@config/*": ["./config/*"]
     }
   }
 }

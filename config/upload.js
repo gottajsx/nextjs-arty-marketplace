@@ -1,0 +1,1 @@
+export const uploadDirectory = "/home/sebastien/Travail/Nextjs/arty-marketplace/public/uploads/tests";
