@@ -1,6 +1,7 @@
 import { connectToDB } from "@mongodb/database";
 import { writeFile } from "fs/promises"
 import Work from "@models/Work";
+import { uploadDirectory } from "@config/uploads";
 
 export async function POST (req) {
   try {
@@ -30,7 +31,7 @@ export async function POST (req) {
       const buffer = Buffer.from(bytes)
 
       // Define the destination path for the uploaded file
-      const workImagePath = `/home/sebastien/Travail/Nextjs/arty-marketplace/public/uploads/tests/${photo.name}`
+      const workImagePath = `${uploadDirectory}/${photo.name}`;
 
       // Write the buffer to the filessystem
       await writeFile(workImagePath, buffer)
