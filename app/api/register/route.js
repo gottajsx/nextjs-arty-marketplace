@@ -47,7 +47,7 @@ export async function POST (req) {
       username,
       email,
       password: hashedPassword,
-      profileImagePath: `/uploads/${file.name}`
+      profileImagePath: `/uploads/tests/${file.name}` //SSC
     })
 
     /* Save new User */
