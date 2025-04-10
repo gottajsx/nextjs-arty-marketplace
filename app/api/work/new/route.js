@@ -1,7 +1,7 @@
 import { connectToDB } from "@mongodb/database";
 import { writeFile } from "fs/promises"
 import Work from "@models/Work";
-import { uploadDirectory } from "@config/uploads";
+import { uploadDirectory } from "@config/upload";
 
 export async function POST (req) {
   try {
@@ -31,13 +31,13 @@ export async function POST (req) {
       const buffer = Buffer.from(bytes)
 
       // Define the destination path for the uploaded file
-      const workImagePath = `${uploadDirectory}/${photo.name}`;
+      const workImagePath = `${uploadDirectory}/${photo.name}`; //SSC
 
       // Write the buffer to the filessystem
-      await writeFile(workImagePath, buffer)
+      await writeFile(workImagePath, buffer);
 
       // Store the file path in an array
-      workPhotoPaths.push(`/uploads/${photo.name}`)
+      workPhotoPaths.push(`/uploads/tests/${photo.name}`); //SSC
     }
 
     /* Create a new Work */
