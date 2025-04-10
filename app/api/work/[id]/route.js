@@ -50,7 +50,7 @@ export const PATCH = async (req, { params }) => {
         await writeFile(workImagePath, buffer);
 
         // Store the file path in an array
-        workPhotoPaths.push(`/uploads/${photo.name}`);
+        workPhotoPaths.push(`/uploads/tests/${photo.name}`); //SSC
       } else {
         // If it's an old photo
         workPhotoPaths.push(photo);
