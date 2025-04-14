@@ -1,6 +1,6 @@
 import Work from "@models/Work";
 import { connectToDB } from "@mongodb/database";
-import { uploadDirectory } from "@config/uploads";
+import { uploadDirectory } from "@config/upload";
 
 export const GET = async (req, { params }) => {
   try {
