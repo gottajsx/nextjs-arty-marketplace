@@ -18,8 +18,8 @@ const WorkSchema = new Schema({
     type: Number
   },
   workPhotoPaths: [{type: String}]
-})
+});
 
-const Work = models.Work || model("Work", WorkSchema)
+const Work = models.Work || model("Work", WorkSchema);
 
-export default Work
+export default Work;

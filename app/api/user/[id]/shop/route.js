@@ -9,11 +9,12 @@ export const GET = async (req, { params }) => {
     const { id } = await params;  
     const user = await User.findById(id);
     const workList = await Work.find({ creator: id }).populate("creator");
-    console.log("workList:", workList);
+    
+    user.works = workList.map(work => work._id);
 
-    user.works = workList;
     try {
-      await user.save();
+      //await user.save();
+      await User.findByIdAndUpdate(id, { works: workList.map(work => work._id) });
     } catch (saveError) {
       console.error("Error saving user:", saveError);
       return new Response("Failed to save user", { status: 500 });
