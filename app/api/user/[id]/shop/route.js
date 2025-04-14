@@ -6,11 +6,19 @@ export const GET = async (req, { params }) => {
   try {
     await connectToDB();
 
-    const user = await User.findById(params.id);
-    const workList = await Work.find({ creator: params.id }).populate("creator");
+    const { id } = await params;  
+    const user = await User.findById(id);
+    const workList = await Work.find({ creator: id }).populate("creator");
+    console.log("workList:", workList);
 
     user.works = workList;
-    await user.save();
+    try {
+      await user.save();
+    } catch (saveError) {
+      console.error("Error saving user:", saveError);
+      return new Response("Failed to save user", { status: 500 });
+    }
+
 
     return new Response(JSON.stringify({ user: user, workList: workList }), { status: 200 });
   } catch (err) {
