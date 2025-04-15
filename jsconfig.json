@@ -6,7 +6,8 @@
       "@mongodb/*": ["./mongodb/*"],
       "@models/*": ["./models/*"],
       "@lib/*": ["./lib/*"],
-      "@config/*": ["./config/*"]
+      "@config/*": ["./config/*"],
+      "@data": ["./data.js"]
     }
   }
 }
